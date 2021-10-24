@@ -16,8 +16,8 @@ The [dataset](https://www.kaggle.com/thedataprof/betalactamase) consists of 136 
 * `target_pref_name:` name of protein tested to interact with the molecule.
 * `bao_label:` bioactivity experiment standard label.
 
-The feature matrix to train machine learning models was obtained by calculating molecular descriptors from `canonical_smiles` of molecules. These molecular descriptors are also known as molecular fingerprints, and they are property profiles of molecules, represented as vectors with each vector element representing the existence or the frequency of a structure feature. The extraction of molecular fingerprints from SMILES was performed with ...
+The feature matrix to train machine learning models was obtained by calculating molecular descriptors from `canonical_smiles` of molecules. These molecular descriptors are also known as molecular fingerprints, and they are property profiles of molecules, represented as vectors with each vector element representing the existence or the frequency of a structure feature. The extraction of molecular fingerprints from SMILES was performed with PanDELpy library, following instructions from [this video](https://youtu.be/rEmDyZHz5U8).
 
-In addition, it is important to notice that this dataset contains interaction data of molecules with various Beta-lactamases. We can create independent machine learning models for each of these proteins, or a single unified model for all of them, which is known as proteochemometric model.
+In addition, it is important to notice that this dataset contains interaction data of molecules with various Beta-lactamases. Therefore, we can create independent machine learning models for each of these proteins, or a single unified model for all of them, which is known as proteochemometric model.
 
 More information about this project and how to contribute with it in this [video](https://youtu.be/_GtEgiWWyK4).
