@@ -2,3 +2,4 @@
 .ipynb_checkpoints/
 Data/MolFingerprints/Results/
 Data/ML_model_training/CDK_training.csv
+__pycache__/
