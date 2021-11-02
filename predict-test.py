@@ -8,9 +8,9 @@ import requests
 # Parameters 
 url = 'http://localhost:9696/predict'
 
-molecule_id = 'CHEMBL1796'
+molecule_id = 'CHEMBL179612'
 
-canonical_smile = 'Cc1sc(cc1\C(=C\C(=O)C(=O)O)\O)c2ccccc2'
+canonical_smile = 'OC(=O)c1ccc2c(c1)nc(c3ccc(O)cc3)n2C4CCCCC4'
 
 # Create a dataframe with name and canonical smile of the molecule to 
 # be predicted 

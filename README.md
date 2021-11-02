@@ -1,5 +1,18 @@
 # **Midterm Project of the Machine Learning ZoomCamp course**
 
+## **Table of contents:**
+
+- [About the project](#about-the-project)
+- [Dataset](#dataset)
+- [Data preparation and feature matrix](#data-preparation-and-feature-matrix)
+- [Machine Learning Models](#machine-learning-models)
+- [Python virtual environment and installation of required libraries](#python-virtual-environment-and-installation-of-required-libraries)
+- [How to run this app as a web service in a local server?](#how-to-run-this-app-as-a-web-service-in-a-local-server)
+- [How to run this app as a web service in the cloud?](#how-to-run-this-app-as-a-web-service-in-the-cloud)
+- [Structure of the repository](#structure-of-the-repository)
+- [How to contribute with the Open Bioinformatics Research Project?](#how-to-contribute-with-the-open-bioinformatics-research-project)
+- [Contact](#contact)
+
 ## **About the project**
 
 For my midterm project of the [Machine Learning Zoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp), I decided to work in the Open Bioinformatics Research Project proposed by [Data Professor](https://github.com/dataprofessor), which is related to Computational Drug Discovery.
@@ -28,7 +41,7 @@ PaDEL has 12 available fingerprints, but for this project, we calculated 10 of t
 
 In addition, it is important to notice that this dataset contains interaction data of molecules with various Beta-lactamases. Therefore, we can create independent machine learning models for each of these proteins, or a single unified model for all of them, which is known as the proteochemometric model. In this project, I created independent models for **Beta-lactamase AmpC**.
 
-## **ML Models**
+## **Machine Learning Models**
 
 For this project, I tested three machine learning models, including Logistic Regression, Random Forest, and XGBoost, for a binary classification task. I chose `pchembl_value` as the target variable. To fine-tune hyperparameters, I used sklearn class [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html#sklearn.model_selection.GridSearchCV).
 
@@ -81,7 +94,7 @@ Then, you should open other terminal and run the `predict-test.py` python script
 
 <br />
 
-<img src="Img/prediction.png" width="800" height="100" alt="Docker image"/>
+<img src="Img/prediction.png" width="800" height="100" alt="Prediction"/>
 
 <br />
 
@@ -89,7 +102,19 @@ If you want to make predictions on other molecules, replace the `canonical_smile
 
 ## **How to run this app as a web service in the cloud?**
 
-## **Structure of this repository**
+I used [Heroku](https://www.heroku.com/home) for hosting the web service in the cloud. For doing the deployment into the cloud, I followed [a tutorial](https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-heroku.md) provided by one of the members of the Machine Learning Zoomcamp, which has details and code required to deploy a web service to the cloud with Heroku.
+
+If you want to try this option, you can replace the `url` variable of the `predict-test.py` python script with this link: https://betalactamase-drug-discovery.herokuapp.com/predict, as is shown in the following screen-shot:
+
+<br />
+
+<img src="Img/heroku.png" width="700" height="250" alt="Heroku"/>
+
+<br />
+
+Then, you need to run the python script in a terminal as in the last section, and you should obtain the same output without running the docker container locally.
+
+## **Structure of the repository**
 
 The main files and directories of this repository are:
 
@@ -111,3 +136,7 @@ The main files and directories of this repository are:
 ## **How to contribute with the Open Bioinformatics Research Project?**
 
 More information about this project and how to contribute to it in this [video](https://youtu.be/_GtEgiWWyK4).
+
+## **Contact**
+
+If you have comments or suggestions about this project, you can [open an issue](https://github.com/sayalaruano/MidtermProject-MLZoomCamp/issues/new) in this repository, or email me at sebasar1245@gamil.com.
